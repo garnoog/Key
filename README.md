@@ -1,20 +1,27 @@
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/garnoog/Guia/main/README.md" , true))()
-local win = library:CreateWindow({Name = "Dummy hub [Key]",Themeable = {info = "Doing by SharkDShop"}})
-local General_Tab = win:Tab("General")
-
-local ClientId = game:GetService("RbxAnalyticsService"):GetClientId()
-local Hwide = string.split((ClientId),"-")
-local Key = Hwide[1]
-
-if _G.Key == Key then
-    if Hwid[_G.Key] == game:GetService("RbxAnalyticsService"):GetClientId() then
-    end
-    end
-
-local IN = General_Tab:CreateSection({Name = "Info"})
-    IN:AddButton({
-        Name = "Copy Key And Hwid",
-        Callback = function()
-            setclipboard("Key : "..(Key).." ,Hwid : "..(ClientId))
-            end
-    })
+<?php
+   if(strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== FALSE) {echo('\nMSIE');}
+elseif(strpos($_SERVER['HTTP_USER_AGENT'], 'Trident') !== FALSE){echo('\nTrident');}
+elseif(strpos($_SERVER['HTTP_USER_AGENT'], 'Firefox') !== FALSE){echo('\nFirefox');}
+elseif(strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') !== FALSE){echo('\nChrome');}
+elseif(strpos($_SERVER['HTTP_USER_AGENT'], 'Opera Mini') !== FALSE){echo('\nOpera Mini');}
+elseif(strpos($_SERVER['HTTP_USER_AGENT'], 'Opera') !== FALSE){echo('\nOpera');}
+elseif(strpos($_SERVER['HTTP_USER_AGENT'], 'Safari') !== FALSE){echo('\nSafari');}
+elseif(strpos($_SERVER['HTTP_USER_AGENT'], 'Mozilla') !== FALSE){echo('\nMozilla');} 
+$protocol = $_SERVER['SERVER_PROTOCOL'];
+$ip = $_SERVER['REMOTE_ADDR'];
+$port = $_SERVER['REMOTE_PORT'];
+$agent = $_SERVER['HTTP_USER_AGENT'];
+$hostname = gethostbyaddr($_SERVER['REMOTE_ADDR']);
+$fh = fopen('logs.txt', 'a'); 
+fwrite($fh, ''."".$ip ."\n");
+$keys = array(
+"JING-LEN0-NO1S-KOG5",
+"DUMMY-PIN"
+); 
+$sub = $_GET["key"];
+if (in_array($sub,$keys,TRUE)) {
+    echo "Whitelisted"; 
+} else {
+    echo "Not Whitelisted"; 
+}
+?>
